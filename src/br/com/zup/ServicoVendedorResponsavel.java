@@ -35,4 +35,12 @@ public class ServicoVendedorResponsavel {
             }
         }
     }
+    public static VendedorResponsável pesquisarVendedorPorEmail(String email)throws Exception{
+        for (VendedorResponsável referencia : vendedoresResponsaveis){
+            if (referencia.getEmail().equalsIgnoreCase(email)){
+                return referencia;
+            }
+        }
+        throw new Exception("Email não cadastrado no sistema.");
+    }
 }
