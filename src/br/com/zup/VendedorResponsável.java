@@ -34,4 +34,13 @@ public class VendedorResponsável {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Nome do Vendedor Responsável: "+nome);
+        retorno.append("Email do Vendedor Responsável: "+email);
+        retorno.append("CPF do Vendedor Responsável: "+cpf);
+        return retorno.toString();
+    }
 }
