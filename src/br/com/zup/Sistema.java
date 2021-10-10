@@ -24,6 +24,11 @@ public class Sistema {
                 "Digite 2 para mostrar todos os vendedores.\n" +
                 "Digite 3 para voltar.\n");
     }
+    public static void menuVendas(){
+        System.out.println("Digite 1 para cadastrar uma nova venda.\n" +
+                "Digite 2 para mostrar todas as vendas.\n" +
+                "Digite 3 para voltar.\n");
+    }
     public static Cliente cadastrarClientes()throws Exception{
         String nome = capturarDados("Digite o nome do Cliente.").nextLine();
         String email = capturarDados("Digite o email do Cliente.").nextLine();
