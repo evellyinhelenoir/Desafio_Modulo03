@@ -43,4 +43,9 @@ public class ServicoVendedorResponsavel {
         }
         throw new Exception("Email não cadastrado no sistema.");
     }
+    public static void exibirVendedores(){
+        for (VendedorResponsável referencia : vendedoresResponsaveis){
+                System.out.println(referencia);
+        }
+    }
 }

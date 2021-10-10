@@ -43,4 +43,9 @@ public class ServicoCliente {
         }
         throw new Exception("Email não cadastrado no sistema.");
     }
+    public static void exibirClientes(){
+        for (Cliente referencia : clientes){
+            System.out.println(referencia);
+        }
+    }
 }

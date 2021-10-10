@@ -13,5 +13,10 @@ public class ServicoVenda {
        vendas.add(venda);
        return venda;
     }
+    public static void exibirVendas(){
+        for (Venda referencia : vendas){
+            System.out.println(referencia);
+        }
+    }
 
 }
