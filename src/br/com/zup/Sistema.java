@@ -53,14 +53,28 @@ public class Sistema {
         int opcao = capturarDados("Digite a opção desejada.").nextInt();
         while (loop){
             menuInicial();
+
             if (opcao == 1){
+
+                boolean loopVendas = true;
+                menuVendas();
+                int opcaoVenda = capturarDados("Digite a opção desejada.").nextInt();
+                while (loopVendas){
+                    if (opcaoVenda == 1){
+                        cadastrarVendas();
+                    }else if (opcaoVenda == 2){
+                        ServicoVenda.exibirVendas();
+                    }else if (opcaoVenda == 3){
+                        loopVendas = false;
+                    }
+                }
 
             }else if (opcao == 2){
 
                 boolean loopCliente = true;
+                menuCliente();
                 int opcaoCliente = capturarDados("Digite a opção desejada.").nextInt();
                 while (loopCliente){
-                    menuCliente();
                     if (opcaoCliente == 1){
                         cadastrarClientes();
                     }else if (opcaoCliente == 2){
@@ -73,9 +87,9 @@ public class Sistema {
             }else if (opcao == 3){
 
                 boolean loopVendedores = true;
+                menuVendedor();
                 int opcaoVendedores = capturarDados("Digite a opção desejada.").nextInt();
                 while (loopVendedores){
-                    menuVendedor();
                     if (opcaoVendedores == 1){
                         cadastrarVendedorResponsavel();
                     }else if (opcaoVendedores == 2){
