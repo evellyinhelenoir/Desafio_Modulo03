@@ -8,7 +8,10 @@ public class ServicoCliente {
 
     public static Cliente cadastrarClientes(String nome, String email, String cpf)throws Exception{
         validarEmail(email);
+
         verificarEmailJaCadastrado(email);
+        verificarCPFJaCadastrado(cpf);
+
         Cliente cliente = new Cliente(nome, email, cpf);
         clientes.add(cliente);
         return cliente;
@@ -22,6 +25,13 @@ public class ServicoCliente {
         for (Cliente referencia : clientes){
             if (referencia.getEmail().equalsIgnoreCase(email)){
                 throw new Exception("Email já cadastrado no sistema.");
+            }
+        }
+    }
+    public static void verificarCPFJaCadastrado(String cpf)throws Exception{
+        for (Cliente referencia : clientes){
+            if (referencia.getCpf().equalsIgnoreCase(cpf)){
+                throw new Exception("CPF já cadastrado no sistema.");
             }
         }
     }
