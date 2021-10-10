@@ -12,7 +12,12 @@ public class Sistema {
                 "Digite 1 para gerenciar as Vendas.\n" +
                 "Digite 2 para gerenciar os Clientes.\n" +
                 "Digite 3 para gerenciar os Vendedores.\n" +
-                "Digite 4 para fechar e sair do programa.");
+                "Digite 4 para fechar e sair do programa.\n");
+    }
+    public static void menuCliente(){
+        System.out.println("Digite 1 para cadastrar um novo cliente.\n" +
+                "Digite 2 para mostrar todos os clientes.\n" +
+                "Digite 3 para voltar.\n");
     }
     public static Cliente cadastrarClientes()throws Exception{
         String nome = capturarDados("Digite o nome do Cliente.").nextLine();
@@ -32,5 +37,35 @@ public class Sistema {
         String emailCliente = capturarDados("Digite o email do Cliente.").nextLine();
         String emailVendedor = capturarDados("Digite o email do Vendedor Responsável.").nextLine();
         return ServicoVenda.cadastrarVendas(valor, dataRegistro,emailCliente,emailVendedor);
+    }
+    public static boolean executar()throws Exception{
+        boolean loop = true;
+        int opcao = capturarDados("Digite a opção desejada.").nextInt();
+        while (loop){
+            menuInicial();
+            if (opcao == 1){
+
+            }else if (opcao == 2){
+
+                boolean loopCliente = true;
+                menuCliente();
+                int opcaoCliente = capturarDados("Digite a opção desejada.").nextInt();
+                while (loopCliente){
+                    if (opcaoCliente == 1){
+                        cadastrarClientes();
+                    }else if (opcaoCliente == 2){
+                        ServicoCliente.exibirClientes();
+                    }else if (opcaoCliente == 3){
+                        loopCliente = false;
+                    }
+                }
+
+            }else if (opcao == 3){
+
+            }else if (opcao == 4){
+                System.out.println("Obrigada por utilizar nossos serviços!");
+                loop = false;
+            }
+        }return true;
     }
 }
