@@ -14,4 +14,10 @@ public class Sistema {
                 "Digite 3 para gerenciar os Vendedores.\n" +
                 "Digite 4 para fechar e sair do programa.");
     }
+    public static Cliente cadastrarClientes(){
+        String nome = capturarDados("Digite o nome do Cliente.").nextLine();
+        String email = capturarDados("Digite o email do Cliente.").nextLine();
+        String cpf = capturarDados("Digite o CPF do cliente.").nextLine();
+        return ServicoCliente.cadastrarClientes(nome, email, cpf);
+    }
 }
