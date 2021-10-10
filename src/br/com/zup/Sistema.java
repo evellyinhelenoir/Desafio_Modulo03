@@ -26,4 +26,11 @@ public class Sistema {
         String cpf = capturarDados("Digite o CPF do Vendedor Responsável.").nextLine();
         return ServicoVendedorResponsavel.cadastrarVendedorResponsavel(nome, email, cpf);
     }
+    public static Venda cadastrarVendas()throws Exception{
+        double valor = capturarDados("Digite o valor da venda.").nextDouble();
+        String dataRegistro = capturarDados("Digite a Data de Registro da venda.").nextLine();
+        String emailCliente = capturarDados("Digite o email do Cliente.").nextLine();
+        String emailVendedor = capturarDados("Digite o email do Vendedor Responsável.").nextLine();
+        return ServicoVenda.cadastrarVendas(valor, dataRegistro,emailCliente,emailVendedor);
+    }
 }
