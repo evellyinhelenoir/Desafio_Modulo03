@@ -17,7 +17,13 @@ public class Sistema {
     public static Cliente cadastrarClientes(){
         String nome = capturarDados("Digite o nome do Cliente.").nextLine();
         String email = capturarDados("Digite o email do Cliente.").nextLine();
-        String cpf = capturarDados("Digite o CPF do cliente.").nextLine();
+        String cpf = capturarDados("Digite o CPF do Cliente.").nextLine();
         return ServicoCliente.cadastrarClientes(nome, email, cpf);
+    }
+    public static VendedorResponsável cadastrarVendedorResponsavel(){
+        String nome = capturarDados("Digite o nome do Vendedor Responsável.").nextLine();
+        String email = capturarDados("Digite o email do Vendedor Responsável.").nextLine();
+        String cpf = capturarDados("Digite o CPF do Vendedor Responsável.").nextLine();
+        return ServicoVendedorResponsavel.cadastrarVendedorResponsavel(nome, email, cpf);
     }
 }
