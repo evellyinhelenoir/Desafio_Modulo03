@@ -1,5 +1,7 @@
 package br.com.zup;
 
+import java.sql.Struct;
+
 public class Venda {
     Cliente cliente;
     VendedorResponsável vendResponsavel;
@@ -43,5 +45,15 @@ public class Venda {
 
     public void setDataRegistro(String dataRegistro) {
         this.dataRegistro = dataRegistro;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("Cliente: "+cliente);
+        retorno.append("Vendedor Responsável: "+vendResponsavel);
+        retorno.append("Valor da Venda: "+valor);
+        retorno.append("Data de Registro: "+dataRegistro);
+        return retorno.toString();
     }
 }
