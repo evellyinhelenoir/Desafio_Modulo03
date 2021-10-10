@@ -14,7 +14,7 @@ public class Sistema {
                 "Digite 3 para gerenciar os Vendedores.\n" +
                 "Digite 4 para fechar e sair do programa.");
     }
-    public static Cliente cadastrarClientes(){
+    public static Cliente cadastrarClientes()throws Exception{
         String nome = capturarDados("Digite o nome do Cliente.").nextLine();
         String email = capturarDados("Digite o email do Cliente.").nextLine();
         String cpf = capturarDados("Digite o CPF do Cliente.").nextLine();
