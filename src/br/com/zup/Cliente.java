@@ -24,4 +24,12 @@ public class Cliente {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder retorno = new StringBuilder();
+        retorno.append("\nEmail do Consumidor: "+email);
+        retorno.append("\nCPF do Consumidor: "+cpf);
+        return retorno.toString();
+   }
 }
