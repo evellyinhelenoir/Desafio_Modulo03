@@ -53,9 +53,9 @@ public class Sistema {
             }else if (opcao == 2){
 
                 boolean loopCliente = true;
-                menuCliente();
                 int opcaoCliente = capturarDados("Digite a opção desejada.").nextInt();
                 while (loopCliente){
+                    menuCliente();
                     if (opcaoCliente == 1){
                         cadastrarClientes();
                     }else if (opcaoCliente == 2){
@@ -66,6 +66,19 @@ public class Sistema {
                 }
 
             }else if (opcao == 3){
+
+                boolean loopVendedores = true;
+                int opcaoVendedores = capturarDados("Digite a opção desejada.").nextInt();
+                while (loopVendedores){
+                    menuVendedor();
+                    if (opcaoVendedores == 1){
+                        cadastrarVendedorResponsavel();
+                    }else if (opcaoVendedores == 2){
+                        ServicoVendedorResponsavel.exibirVendedores();
+                    }else if (opcaoVendedores == 3){
+                        loopVendedores = false;
+                    }
+                }
 
             }else if (opcao == 4){
                 System.out.println("Obrigada por utilizar nossos serviços!");
