@@ -26,5 +26,4 @@ public class Sistema {
         String cpf = capturarDados("Digite o CPF do Vendedor Responsável.").nextLine();
         return ServicoVendedorResponsavel.cadastrarVendedorResponsavel(nome, email, cpf);
     }
-
 }

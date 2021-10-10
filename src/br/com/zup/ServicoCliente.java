@@ -35,4 +35,12 @@ public class ServicoCliente {
             }
         }
     }
+    public static Cliente pesquisarClientePorEmail(String email)throws Exception{
+        for (Cliente referencia : clientes){
+            if (referencia.getEmail().equalsIgnoreCase(email)){
+                return referencia;
+            }
+        }
+        throw new Exception("Email não cadastrado no sistema.");
+    }
 }
