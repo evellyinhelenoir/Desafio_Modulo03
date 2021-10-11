@@ -5,7 +5,7 @@ public class Cliente {
     private String email;
     private String cpf;
 
-    public Cliente(String email, String cpf, String nome) {
+    public Cliente(String nome, String email, String cpf) {
         this.email = email;
         this.cpf = cpf;
         this.nome = nome;
@@ -40,7 +40,7 @@ public class Cliente {
         StringBuilder retorno = new StringBuilder();
         retorno.append("\nNome do Consumidor: "+nome);
         retorno.append("\nEmail do Consumidor: "+email);
-        retorno.append("\nCPF do Consumidor: "+cpf);
+        retorno.append("\nCPF do Consumidor: "+cpf+"\n");
         return retorno.toString();
    }
 }

@@ -1,14 +1,12 @@
 package br.com.zup;
 
-import java.sql.Struct;
-
 public class Venda {
     Cliente cliente;
-    VendedorResponsável vendResponsavel;
+    VendedorResponsavel vendResponsavel;
     double valor;
     String dataRegistro;
 
-    public Venda(Cliente cliente, VendedorResponsável vendResponsavel, double valor, String dataRegistro) {
+    public Venda(Cliente cliente, VendedorResponsavel vendResponsavel, double valor, String dataRegistro) {
         this.cliente = cliente;
         this.vendResponsavel = vendResponsavel;
         this.valor = valor;
@@ -23,11 +21,11 @@ public class Venda {
         this.cliente = cliente;
     }
 
-    public VendedorResponsável getVendResponsavel() {
+    public VendedorResponsavel getVendResponsavel() {
         return vendResponsavel;
     }
 
-    public void setVendResponsavel(VendedorResponsável vendResponsavel) {
+    public void setVendResponsavel(VendedorResponsavel vendResponsavel) {
         this.vendResponsavel = vendResponsavel;
     }
 
@@ -50,10 +48,11 @@ public class Venda {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Cliente: "+cliente);
-        retorno.append("Vendedor Responsável: "+vendResponsavel);
-        retorno.append("Valor da Venda: "+valor);
-        retorno.append("Data de Registro: "+dataRegistro);
+        retorno.append("--------------------");
+        retorno.append("\nCliente: "+cliente);
+        retorno.append("\nVendedor Responsável: "+vendResponsavel);
+        retorno.append("\nValor da Venda: "+valor);
+        retorno.append("\nData de Registro: "+dataRegistro+"\n");
         return retorno.toString();
     }
 }

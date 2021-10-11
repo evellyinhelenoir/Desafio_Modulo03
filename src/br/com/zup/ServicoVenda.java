@@ -8,8 +8,8 @@ public class ServicoVenda {
 
     public static Venda cadastrarVendas(double valor, String dataRegsitro, String emailCliente, String emailVendedor)throws Exception{
        Cliente cliente = ServicoCliente.pesquisarClientePorEmail(emailCliente);
-       VendedorResponsável vendedorResponsável = ServicoVendedorResponsavel.pesquisarVendedorPorEmail(emailVendedor);
-       Venda venda = new Venda(cliente, vendedorResponsável, valor, dataRegsitro);
+       VendedorResponsavel vendedorResponsavel = ServicoVendedorResponsavel.pesquisarVendedorPorEmail(emailVendedor);
+       Venda venda = new Venda(cliente, vendedorResponsavel, valor, dataRegsitro);
        vendas.add(venda);
        return venda;
     }

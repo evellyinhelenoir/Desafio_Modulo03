@@ -4,47 +4,47 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ServicoVendedorResponsavel {
-    public static List<VendedorResponsável> vendedoresResponsaveis = new ArrayList<>();
+    public static List<VendedorResponsavel> vendedoresResponsaveis = new ArrayList<>();
 
-    public static VendedorResponsável cadastrarVendedorResponsavel(String nome, String email, String cpf)throws Exception{
+    public static VendedorResponsavel cadastrarVendedorResponsavel(String nome, String email, String cpf)throws Exception{
         validarEmail(email);
 
         verificarEmailJaCadastrado(email);
         verificarCPFJaCadastrado(cpf);
 
-        VendedorResponsável vendedorResonsavel = new VendedorResponsável(nome, email, cpf);
+        VendedorResponsavel vendedorResonsavel = new VendedorResponsavel(nome, email, cpf);
         vendedoresResponsaveis.add(vendedorResonsavel);
         return vendedorResonsavel;
     }
     public static void validarEmail(String email) throws Exception{
         if (!email.contains("@")){
-            throw new Exception("Email inválido.");
+            throw new Exception("Email do vendedor inválido.");
         }
     }
     public static void verificarEmailJaCadastrado(String email)throws Exception{
-        for (VendedorResponsável referencia : vendedoresResponsaveis){
+        for (VendedorResponsavel referencia : vendedoresResponsaveis){
             if (referencia.getEmail().equalsIgnoreCase(email)){
-                throw new Exception("Email já cadastrado no sistema.");
+                throw new Exception("Email do vendedor já cadastrado no sistema.");
             }
         }
     }
     public static void verificarCPFJaCadastrado(String cpf)throws Exception{
-        for (VendedorResponsável referencia : vendedoresResponsaveis){
+        for (VendedorResponsavel referencia : vendedoresResponsaveis){
             if (referencia.getCpf().equalsIgnoreCase(cpf)){
-                throw new Exception("CPF já cadastrado no sistema.");
+                throw new Exception("CPF do vendedor já cadastrado no sistema.");
             }
         }
     }
-    public static VendedorResponsável pesquisarVendedorPorEmail(String email)throws Exception{
-        for (VendedorResponsável referencia : vendedoresResponsaveis){
+    public static VendedorResponsavel pesquisarVendedorPorEmail(String email)throws Exception{
+        for (VendedorResponsavel referencia : vendedoresResponsaveis){
             if (referencia.getEmail().equalsIgnoreCase(email)){
                 return referencia;
             }
         }
-        throw new Exception("Email não cadastrado no sistema.");
+        throw new Exception("Email do vendedor não cadastrado no sistema.");
     }
     public static void exibirVendedores(){
-        for (VendedorResponsável referencia : vendedoresResponsaveis){
+        for (VendedorResponsavel referencia : vendedoresResponsaveis){
                 System.out.println(referencia);
         }
     }

@@ -18,20 +18,20 @@ public class ServicoCliente {
     }
     public static void validarEmail(String email) throws Exception{
         if (!email.contains("@")){
-            throw new Exception("Email inválido.");
+            throw new Exception("Email do cliente inválido.");
         }
     }
     public static void verificarEmailJaCadastrado(String email)throws Exception{
         for (Cliente referencia : clientes){
             if (referencia.getEmail().equalsIgnoreCase(email)){
-                throw new Exception("Email já cadastrado no sistema.");
+                throw new Exception("Email do cliente já cadastrado no sistema.");
             }
         }
     }
     public static void verificarCPFJaCadastrado(String cpf)throws Exception{
         for (Cliente referencia : clientes){
             if (referencia.getCpf().equalsIgnoreCase(cpf)){
-                throw new Exception("CPF já cadastrado no sistema.");
+                throw new Exception("CPF do cliente já cadastrado no sistema.");
             }
         }
     }
@@ -41,7 +41,7 @@ public class ServicoCliente {
                 return referencia;
             }
         }
-        throw new Exception("Email não cadastrado no sistema.");
+        throw new Exception("Email do cliente não cadastrado no sistema.");
     }
     public static void exibirClientes(){
         for (Cliente referencia : clientes){

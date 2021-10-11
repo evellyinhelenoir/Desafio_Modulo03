@@ -1,11 +1,11 @@
 package br.com.zup;
 
-public class VendedorResponsável {
+public class VendedorResponsavel {
     private String nome;
     private String email;
     private String cpf;
 
-    public VendedorResponsável(String nome, String email, String cpf) {
+    public VendedorResponsavel(String nome, String email, String cpf) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
@@ -38,9 +38,9 @@ public class VendedorResponsável {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Nome do Vendedor Responsável: "+nome);
-        retorno.append("Email do Vendedor Responsável: "+email);
-        retorno.append("CPF do Vendedor Responsável: "+cpf);
+        retorno.append("\nNome do Vendedor Responsável: "+nome);
+        retorno.append("\nEmail do Vendedor Responsável: "+email);
+        retorno.append("\nCPF do Vendedor Responsável: "+cpf+"\n");
         return retorno.toString();
     }
 }

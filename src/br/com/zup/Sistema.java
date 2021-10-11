@@ -35,7 +35,7 @@ public class Sistema {
         String cpf = capturarDados("Digite o CPF do Cliente.").nextLine();
         return ServicoCliente.cadastrarClientes(nome, email, cpf);
     }
-    public static VendedorResponsável cadastrarVendedorResponsavel() throws Exception{
+    public static VendedorResponsavel cadastrarVendedorResponsavel() throws Exception{
         String nome = capturarDados("Digite o nome do Vendedor Responsável.").nextLine();
         String email = capturarDados("Digite o email do Vendedor Responsável.").nextLine();
         String cpf = capturarDados("Digite o CPF do Vendedor Responsável.").nextLine();
@@ -50,16 +50,17 @@ public class Sistema {
     }
     public static boolean executar()throws Exception{
         boolean loop = true;
-        int opcao = capturarDados("Digite a opção desejada.").nextInt();
+
         while (loop){
             menuInicial();
-
+            int opcao = capturarDados("Digite a opção desejada.").nextInt();
             if (opcao == 1){
 
                 boolean loopVendas = true;
-                menuVendas();
-                int opcaoVenda = capturarDados("Digite a opção desejada.").nextInt();
+
                 while (loopVendas){
+                    menuVendas();
+                    int opcaoVenda = capturarDados("Digite a opção desejada.").nextInt();
                     if (opcaoVenda == 1){
                         cadastrarVendas();
                     }else if (opcaoVenda == 2){
@@ -72,9 +73,10 @@ public class Sistema {
             }else if (opcao == 2){
 
                 boolean loopCliente = true;
-                menuCliente();
-                int opcaoCliente = capturarDados("Digite a opção desejada.").nextInt();
+
                 while (loopCliente){
+                    menuCliente();
+                    int opcaoCliente = capturarDados("Digite a opção desejada.").nextInt();
                     if (opcaoCliente == 1){
                         cadastrarClientes();
                     }else if (opcaoCliente == 2){
@@ -87,9 +89,10 @@ public class Sistema {
             }else if (opcao == 3){
 
                 boolean loopVendedores = true;
-                menuVendedor();
-                int opcaoVendedores = capturarDados("Digite a opção desejada.").nextInt();
+
                 while (loopVendedores){
+                    menuVendedor();
+                    int opcaoVendedores = capturarDados("Digite a opção desejada.").nextInt();
                     if (opcaoVendedores == 1){
                         cadastrarVendedorResponsavel();
                     }else if (opcaoVendedores == 2){
