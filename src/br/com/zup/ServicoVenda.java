@@ -16,5 +16,4 @@ public class ServicoVenda {
     public static void exibirVendas(){
         vendas.forEach(System.out::println);
     }
-
 }

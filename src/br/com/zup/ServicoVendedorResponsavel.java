@@ -46,4 +46,11 @@ public class ServicoVendedorResponsavel {
     public static void exibirVendedores(){
         vendedoresResponsaveis.forEach(System.out::println);
     }
+    public static void pesquisarVendasVendedor(String email)throws Exception{
+        for (Venda referencia : ServicoVenda.vendas){
+            if (referencia.getVendResponsavel().getEmail().equalsIgnoreCase(email)){
+                System.out.println(referencia);
+            }
+        }throw new Exception("Vendedor ou venda não encontrada.");
+    }
 }
