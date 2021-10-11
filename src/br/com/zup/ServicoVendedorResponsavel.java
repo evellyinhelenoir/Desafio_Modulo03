@@ -47,10 +47,12 @@ public class ServicoVendedorResponsavel {
         vendedoresResponsaveis.forEach(System.out::println);
     }
     public static void pesquisarVendasVendedor(String email)throws Exception{
-        for (Venda referencia : ServicoVenda.vendas){
-            if (referencia.getVendResponsavel().getEmail().equalsIgnoreCase(email)){
+        for (Venda referencia : ServicoVenda.vendas) {
+            if (referencia.getVendResponsavel().getEmail().equalsIgnoreCase(email)) {
                 System.out.println(referencia);
+            }else {
+                throw new Exception("Venda não encontrada ou email inválido.");
             }
-        }throw new Exception("Venda não encontrada ou email inválido.");
+        }
     }
 }

@@ -50,7 +50,9 @@ public class ServicoCliente {
         for (Venda referencia : ServicoVenda.vendas){
             if (referencia.getCliente().getCpf().equalsIgnoreCase(cpf)){
                 System.out.println(referencia);
+            }else {
+                throw new Exception("Compra não encontrada ou cpf inválido.");
             }
-        }throw new Exception("Compra não encontrada ou cpf inválido.");
+        }
     }
 }

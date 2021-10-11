@@ -15,19 +15,21 @@ public class Sistema {
                 "Digite 4 para fechar e sair do programa.\n");
     }
     public static void menuCliente(){
-        System.out.println("Digite 1 para cadastrar um novo cliente.\n" +
+        System.out.println("\nDigite 1 para cadastrar um novo cliente.\n" +
                 "Digite 2 para mostrar todos os clientes.\n" +
-                "Digite 3 para voltar.\n");
+                "Digite 3 para mostrar todas as compras de um cliente.\n" +
+                "Digite 4 para voltar.\n");
     }
     public static void menuVendedor(){
-        System.out.println("Digite 1 para cadastrar um novo vendedor.\n" +
+        System.out.println("\nDigite 1 para cadastrar um novo vendedor.\n" +
                 "Digite 2 para mostrar todos os vendedores.\n" +
-                "Digite 3 para voltar.\n");
+                "Digite 3 para mostrar pesquisar todas as vendas de um vendedor.\n" +
+                "Digite 4 para voltar.\n");
     }
     public static void menuVendas(){
-        System.out.println("Digite 1 para cadastrar uma nova venda.\n" +
+        System.out.println("\nDigite 1 para cadastrar uma nova venda.\n" +
                 "Digite 2 para mostrar todas as vendas.\n" +
-                "Digite 3 para voltar.\n");
+                "Digite 3 para voltar.");
     }
     public static Cliente cadastrarClientes()throws Exception{
         String nome = capturarDados("Digite o nome do Cliente.").nextLine();
@@ -84,6 +86,8 @@ public class Sistema {
                     }else if (opcaoCliente == 2){
                         ServicoCliente.exibirClientes();
                     }else if (opcaoCliente == 3){
+                        ServicoCliente.pesquisarComprasCliente(capturarDados("Digite o CPF do Cliente.").nextLine());
+                    }else if (opcaoCliente == 4){
                         loopCliente = false;
                     }
                 }
@@ -101,6 +105,8 @@ public class Sistema {
                     }else if (opcaoVendedores == 2){
                         ServicoVendedorResponsavel.exibirVendedores();
                     }else if (opcaoVendedores == 3){
+                        ServicoVendedorResponsavel.pesquisarVendasVendedor(capturarDados("Digite o email do Vendedor.").nextLine());
+                    }else if (opcaoVendedores == 4){
                         loopVendedores = false;
                     }
                 }
