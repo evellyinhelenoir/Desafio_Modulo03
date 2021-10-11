@@ -1,16 +1,19 @@
 package br.com.zup;
 
+// Atributos base da classe.
 public class Cliente {
     private String nome;
     private String email;
     private String cpf;
 
+    // Construtor da classe.
     public Cliente(String nome, String email, String cpf) {
         this.email = email;
         this.cpf = cpf;
         this.nome = nome;
     }
 
+    // Getters e Setters.
     public String getEmail() {
         return email;
     }
@@ -35,6 +38,7 @@ public class Cliente {
         this.nome = nome;
     }
 
+    // toString personalizado.
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();

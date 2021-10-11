@@ -1,16 +1,19 @@
 package br.com.zup;
 
+// Atributos base da classe.
 public class VendedorResponsavel {
     private String nome;
     private String email;
     private String cpf;
 
+    // Construtor.
     public VendedorResponsavel(String nome, String email, String cpf) {
         this.nome = nome;
         this.email = email;
         this.cpf = cpf;
     }
 
+    // Getters e Setters.
     public String getNome() {
         return nome;
     }
@@ -35,6 +38,7 @@ public class VendedorResponsavel {
         this.cpf = cpf;
     }
 
+    // toString personalizado.
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();

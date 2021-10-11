@@ -1,11 +1,13 @@
 package br.com.zup;
 
+// Atributos base da classe.
 public class Venda {
     Cliente cliente;
     VendedorResponsavel vendResponsavel;
     double valor;
     String dataRegistro;
 
+    // Construtor.
     public Venda(Cliente cliente, VendedorResponsavel vendResponsavel, double valor, String dataRegistro) {
         this.cliente = cliente;
         this.vendResponsavel = vendResponsavel;
@@ -13,6 +15,7 @@ public class Venda {
         this.dataRegistro = dataRegistro;
     }
 
+    // Getters e Setters.
     public Cliente getCliente() {
         return cliente;
     }
@@ -45,6 +48,7 @@ public class Venda {
         this.dataRegistro = dataRegistro;
     }
 
+    // toString personalizado.
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
