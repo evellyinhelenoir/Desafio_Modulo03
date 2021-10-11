@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Loop de execução continúa do sistema mesmo após a trativa de excessão.
+        //Loop de execução continúa do sistema mesmo após a trativa de exceção.
         boolean loop = true;
         while (loop){
             try{
