@@ -62,7 +62,8 @@ public class Sistema {
                     menuVendas();
                     int opcaoVenda = capturarDados("Digite a opção desejada.").nextInt();
                     if (opcaoVenda == 1){
-                        cadastrarVendas();
+                        Venda venda = cadastrarVendas();
+                        System.out.println(venda);
                     }else if (opcaoVenda == 2){
                         ServicoVenda.exibirVendas();
                     }else if (opcaoVenda == 3){
@@ -78,7 +79,8 @@ public class Sistema {
                     menuCliente();
                     int opcaoCliente = capturarDados("Digite a opção desejada.").nextInt();
                     if (opcaoCliente == 1){
-                        cadastrarClientes();
+                        Cliente cliente = cadastrarClientes();
+                        System.out.println(cliente);
                     }else if (opcaoCliente == 2){
                         ServicoCliente.exibirClientes();
                     }else if (opcaoCliente == 3){
@@ -94,7 +96,8 @@ public class Sistema {
                     menuVendedor();
                     int opcaoVendedores = capturarDados("Digite a opção desejada.").nextInt();
                     if (opcaoVendedores == 1){
-                        cadastrarVendedorResponsavel();
+                        VendedorResponsavel vendedor = cadastrarVendedorResponsavel();
+                        System.out.println(vendedor);
                     }else if (opcaoVendedores == 2){
                         ServicoVendedorResponsavel.exibirVendedores();
                     }else if (opcaoVendedores == 3){
