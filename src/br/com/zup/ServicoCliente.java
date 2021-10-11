@@ -46,4 +46,11 @@ public class ServicoCliente {
     public static void exibirClientes(){
         clientes.forEach(System.out::println);
     }
+    public static void pesquisarComprasCliente(String cpf)throws Exception{
+        for (Venda referencia : ServicoVenda.vendas){
+            if (referencia.getCliente().getCpf().equalsIgnoreCase(cpf)){
+                System.out.println(referencia);
+            }
+        }throw new Exception("Compra não encontrada ou cpf inválido.");
+    }
 }

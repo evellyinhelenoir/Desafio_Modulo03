@@ -51,6 +51,6 @@ public class ServicoVendedorResponsavel {
             if (referencia.getVendResponsavel().getEmail().equalsIgnoreCase(email)){
                 System.out.println(referencia);
             }
-        }throw new Exception("Vendedor ou venda não encontrada.");
+        }throw new Exception("Venda não encontrada ou email inválido.");
     }
 }
